@@ -1,0 +1,75 @@
+
+# Configuración de Archivos
+
+Este documento detalla la configuración de los archivos `next.config.js`, `next-sitemap.config.js` y `jsconfig.json` utilizados en el proyecto.
+
+## next.config.js
+
+Este archivo configura Next.js para la exportación estática y define alias para las rutas.
+
+```javascript
+const path = require('path');
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  trailingSlash: true,
+  output: 'export',
+  webpack: (config) => {
+    config.resolve.alias['@'] = path.resolve(__dirname, 'src');
+    return config;
+  },
+};
+
+module.exports = nextConfig;
+```
+
+- **reactStrictMode:** Habilita el modo estricto de React para ayudar a identificar problemas potenciales.
+- **trailingSlash:** Asegura que todas las rutas terminan con una barra.
+- **output:** Configura la salida para exportar el sitio de manera estática.
+- **webpack:** Define un alias para rutas, facilitando las importaciones en el proyecto.
+
+## next-sitemap.config.js
+
+Este archivo configura el `next-sitemap` para generar un `sitemap.xml` y `robots.txt` automáticamente.
+
+```javascript
+/** @type {import('next-sitemap').IConfig} */
+const config = {
+  siteUrl: 'https://subdominio.tudominio.com', // Reemplaza con tu subdominio real
+  generateRobotsTxt: true, // Genera un archivo robots.txt
+};
+
+module.exports = config;
+```
+
+- **siteUrl:** Define la URL base de tu sitio.
+- **generateRobotsTxt:** Habilita la generación automática de un archivo `robots.txt`.
+
+## jsconfig.json
+
+Este archivo configura las opciones del compilador y define alias de ruta para el proyecto.
+
+```json
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["src"]
+}
+```
+
+- **baseUrl:** Define la base para las rutas relativas.
+- **paths:** Define alias para las rutas, facilitando las importaciones en el proyecto.
+- **include:** Especifica los archivos y carpetas a incluir en el proyecto.
+
+## Mantenimiento de Configuraciones
+
+- **next.config.js:** Actualiza este archivo si cambias la estructura del proyecto o necesitas nuevas configuraciones de Webpack.
+- **next-sitemap.config.js:** Asegúrate de mantener actualizada la `siteUrl` y otros ajustes específicos del SEO.
+- **jsconfig.json:** Ajusta las rutas y alias según la estructura de tu proyecto.
+
+Estas configuraciones aseguran que tu proyecto Next.js esté optimizado para la exportación estática, facilitando la gestión y el despliegue del sitio.

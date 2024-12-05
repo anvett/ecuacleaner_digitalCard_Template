@@ -1,0 +1,104 @@
+@import "../../styles/variables.scss";
+
+.bankLogo {
+  border-radius: 55%;
+  border: solid 3px $primary-color;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+}
+
+.captionHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center; // Centra el texto
+  margin: 0; // Remueve el margen por defecto
+  padding-top: $spacing-3; // Espacio arriba del texto
+  padding-bottom: $spacing-3;
+  background-color: $primary-color;
+
+  .captionTitle {
+    padding: $spacing-3; // Espacio alrededor del título
+    margin: 0; // Remueve el margen por defecto
+    color: $primary-color; // Color del texto
+    font-weight: bolder;
+    background-color: $accent-color;
+    width: 100%;
+    border-radius: 25px;
+    text-align: center;
+    font-family: $font-primary;
+  }
+
+  span {
+    font-size: 1rem;
+    color: $accent-color;
+    padding-top: $spacing-3;
+    font-family: $font-secondary;
+  }
+}
+
+.captionBody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem; // Espacio alrededor del contenido del modal
+  background-color: $primary-color; // Fondo del contenedor de texto del modal
+  color: $secondary-color; // Color del texto
+
+  span {
+    font-size: 1rem;
+    color: $accent-color;
+    font-weight: bolder;
+    text-align: left; // Ajuste para alinear el texto a la izquierda
+    width: 100%;
+    margin-bottom: $spacing-2; // Asegura espacio entre elementos
+    font-family: $font-secondary;
+  }
+
+  .paymentDetail {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $spacing-1 $spacing-2; // Ajuste de padding si es necesario
+
+    button {
+      // Estilos para tus botones, ajusta según sea necesario
+      font-size: 0.875rem;
+      padding: $spacing-1 $spacing-2;
+      margin: 0; // Ajuste si es necesario
+      background-color: $accent-color; // O cualquier color que desees para los botones
+      color: $primary-color;
+      border: none; // Ajuste si prefieres bordes
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken($secondary-color, 10%); // Oscurece el color en hover
+      }
+    }
+  }
+}
+
+.closeButtonContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-top: 2rem;
+
+  .closeButton {
+    background-color: $accent-color !important;
+    color: $primary-color !important;
+    font-size: 0.8rem !important;
+    padding: 0.25rem 1rem;
+    border-radius: 15px;
+    font-family: $font-secondary;
+
+    &:hover {
+      background-color: darken($secondary-color, 15%) !important;
+    }
+  }
+}
