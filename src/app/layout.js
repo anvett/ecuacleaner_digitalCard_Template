@@ -18,7 +18,7 @@ export const metadata = {
     url: "https://gisselleconde.ecuacleanerinc.com",
     images: [
       {
-        url: "https://gisselleconde.ecuacleanerinc.com/assets/images/sharedimage.png",
+        url: "https://gisselleconde.ecuacleanerinc.com/assets/images/shared_image.png",
         alt: "EcuaCleaner Logo",
         width: 1200, // Ajuste de tamaño recomendado para OpenGraph
         height: 630,

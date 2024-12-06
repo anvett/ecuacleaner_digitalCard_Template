@@ -41,7 +41,7 @@ export default function Home() {
     image: "/assets/images/profile/profile.jpg",
     description:
       "¡Hola! Soy Gisselle, asistente de ventas en Ecuacleaner Inc. Estoy aquí para ayudarte con cualquier consulta o información que necesites sobre nuestros productos y servicios. Contáctame para más detalles.",
-    phone: "+7866835202",
+    phone: "+17866835202",
   };
 
   const whatsappMessage = "Hola Gisselle, me gustaría que me ayudes con información.";
@@ -66,7 +66,7 @@ export default function Home() {
     {
       type: "phone",
       icon: "/assets/icons/call.png",
-      action: "tel:+7866835202",
+      action: "tel:+17866835202",
       text: "Llamar",
     },
     {
@@ -78,7 +78,7 @@ export default function Home() {
     {
       type: "whatsapp",
       icon: "/assets/icons/whatsapp.png",
-      action: "https://wa.me/+7866835202",
+      action: "https://wa.me/+17866835202",
       text: "WhatsApp",
     },
   ];
@@ -221,7 +221,7 @@ export default function Home() {
 
     const ctaText = "¿Listo para darle a tu vehículo el cuidado que se merece?";
     const buttonText = "¡Contáctanos Ahora!";
-    const buttonLink = "https://wa.me/+7866835202"; // Ruta al formulario o página de solicitud
+    const buttonLink = "https://wa.me/+17866835202"; // Ruta al formulario o página de solicitud
   //---------------------------------------------------------
 
   return (

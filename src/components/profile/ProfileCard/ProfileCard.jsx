@@ -73,8 +73,8 @@ const ProfileCard = ({ profile, whatsappMessage }) => {
               Contactar
             </a>
             <a
-              href="/assets/vcards/aveintimilla_contact.vcf"
-              download="anvetcorp_contact.vcf"
+              href="/assets/vcards/gisselleconde_contact.vcf"
+              download="gisselleconde_contact.vcf"
               className="btn main-button "
             >
               Guardar Contacto

@@ -82,7 +82,7 @@
 }
 
 .slide-button {
-  @apply bg-primary text-light   px-spacing-1 py-1 rounded-full sm:px-spacing-3 hover:bg-accent hover:text-primary transition ease-in duration-300 transform hover:scale-110 ; 
+  @apply bg-secondary text-light   px-spacing-1 py-1 rounded-full sm:px-spacing-3 hover:bg-accent hover:text-primary transition ease-in duration-300 transform hover:scale-110 ; 
   @apply w-spacing-12 md:w-spacing-16 sm:w-spacing-10 ;
 }
 
@@ -103,7 +103,7 @@
 /* --------------------------------------------- */
 
 .bg-gradient-primary {
-  @apply bg-gradient-to-br from-primary to-accent;
+  @apply bg-gradient-to-br from-primary to-secondary;
 }
 
 /* --------------------------------------------- */
