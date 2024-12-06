@@ -71,7 +71,14 @@ const GalleryWithModal = ({ items }) => {
             exit="exit"
             variants={modalAnimation}
           >
-            <motion.div className="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+            <motion.div className="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-primary">
+               {/* Botón de cierre en la esquina superior derecha */}
+               <button
+                onClick={closeModal}
+                className="absolute top-1 right-1 text-secondary hover:text-light focus:outline-none text-size-4"
+              >
+                &times; {/* Esto es la "X" */}
+              </button>
               <div className="mt-3 text-center flex flex-col">
                 {/* Renderizado condicional para video o imagen */}
                 {selectedItem.type === "video" ? (
@@ -88,9 +95,9 @@ const GalleryWithModal = ({ items }) => {
                     className="object-cover"
                   />
                 )}
-                <h3 className="text-primary section-h4 pt-spacing-1">{selectedItem.title}</h3>
+                <h3 className="text-light section-h4 pt-spacing-1">{selectedItem.title}</h3>
 
-                <ul className="text-left list-disc list-inside text-primary">
+                <ul className="text-left list-disc list-inside text-light">
                   {selectedItem.description.map((desc, index) => (
                     <li className="py-spacing-1 sm:spacing:2" key={index}>{desc}</li>
                   ))}
@@ -101,11 +108,11 @@ const GalleryWithModal = ({ items }) => {
                     target="_blank" rel="noopener noreferrer" href={`https://wa.me/+593992543979?text=Desearía%20saber%20más%20sobre%20${encodeURIComponent(
                       selectedItem.title
                     )}`}
-                    className="main-button text-sm"
+                    className="modal-button text-sm"
                   >
                     Contactar por WhatsApp
                   </a>
-                  <button onClick={closeModal} className="main-button text-sm">
+                  <button onClick={closeModal} className="modal-button text-sm">
                     Cerrar
                   </button>
                 </div>

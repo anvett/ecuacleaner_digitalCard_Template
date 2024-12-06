@@ -9,7 +9,7 @@ const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
   return (
     <div className="flex flex-col justify-center items-center py-spacing-3 px-4 md:px-0 pb-3">
-      <h1 className="section-subtitle text-light mb-2">{title || "My Custom Player"}</h1>
+      <h1 className="section-subtitle text-secondary mb-2">{title || "My Custom Player"}</h1>
       <div className="w-full max-w-screen-md">
         <ReactPlayer
           width="100%"

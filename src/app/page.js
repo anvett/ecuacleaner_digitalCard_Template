@@ -10,6 +10,8 @@ import Slider from "@/components/cardContent/Slider/Slider.jsx";
 import VideoPlayer from "@/components/VideoPlayer/VideoPlayer.jsx";
 import QRDisplay from "@/components/cardContent/QRDisplay/QRDispaly.jsx";
 import HeroImage from "@/components/heroImage/HeroImage.jsx";
+import Hero from "@/components/hero/Hero.jsx";
+import CallToAction from "@/components/cta/CallToAction.jsx";
 
 
 // Animaciones básicas
@@ -214,18 +216,20 @@ export default function Home() {
   ];
 
   //---------------------------------------------------------
+  // CTA
+  //---------------------------------------------------------
+
+    const ctaText = "¿Listo para darle a tu vehículo el cuidado que se merece?";
+    const buttonText = "¡Contáctanos Ahora!";
+    const buttonLink = "https://wa.me/+7866835202"; // Ruta al formulario o página de solicitud
+  //---------------------------------------------------------
 
   return (
     <main>
-      {/* Hero Section */}
-      <HeroImage
-        imageSrc="/assets/images/hero_card.jpg"
-        altText="Ecuacleaner Inc. Car Wash"
-      />
 
-      
       {/* Sección Inicio */}
       <motion.div initial="hidden" animate="visible" variants={fadeIn} id="inicio">
+        <Hero />
         <ProfileCard profile={profileData} whatsappMessage={whatsappMessage} />
         <ContactButtons contacts={contacts} />
         <SocialMediaIcons socialLinks={socialMediaLinks} />
@@ -266,6 +270,11 @@ export default function Home() {
       {/* QR Code */}
       <motion.div initial="hidden" animate="visible" variants={fadeIn} className="my-spacing-4">
         <QRDisplay qrImage="/assets/images/qr_code.png" title="Código QR" />
+      </motion.div>
+
+      {/* Cta */}
+      <motion.div initial="hidden" animate="visible" variants={fadeIn} className="my-spacing-4">
+        <CallToAction ctaText={ctaText} buttonText={buttonText} buttonLink={buttonLink} />
       </motion.div>
     </main>
   );

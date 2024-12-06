@@ -10,7 +10,7 @@ const CallToAction = ({ ctaText, buttonText, buttonLink }) => {
   const [ref, isVisible] = useIntersectionObserver({ threshold: 0.1 });
 
   return (
-    <section ref={ref} className="relative py-spacing-8 bg-light text-light text-center overflow-hidden">
+    <section ref={ref} className="relative py-spacing-8  text-light text-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         {/* <Canvas className="h-full w-full">
           <Cloud
@@ -25,7 +25,7 @@ const CallToAction = ({ ctaText, buttonText, buttonLink }) => {
       </div>
       <div className="relative max-w-7xl mx-auto px-4 z-10">
         <motion.h2
-          className="section-title text-primary"
+          className="section-title text-light"
           initial={{ y: -50, opacity: 0 }}
           animate={isVisible ? { y: 0, opacity: 1 } : {}}
           transition={{ duration: 1, ease: "easeInOut" }}
@@ -34,7 +34,7 @@ const CallToAction = ({ ctaText, buttonText, buttonLink }) => {
         </motion.h2>
         <motion.a
           href={buttonLink}
-          className="bg-primary text-light font-bold px-6 py-3 rounded-full btn-custom hover:bg-accent hover:text-primary"
+          className="main-button"
           initial={{ y: 50, opacity: 0 }}
           animate={isVisible ? { y: 0, opacity: 1 } : {}}
           transition={{ duration: 1, ease: "easeInOut", delay: 0.5 }}

@@ -5,7 +5,7 @@ const QRDisplay = ({ qrImage, title }) => {
   return (
     <div className="flex flex-col items-center justify-center py-spacing-3">
       <h2 className="section-subtitle">{title}</h2>
-      <div className="relative w-48 h-48 my-spacing-3">  {/* Tamaño mediano en todas las pantallas */}
+      <div className="relative w-60 h-60 my-spacing-3">  {/* Tamaño mediano en todas las pantallas */}
         <Image
           src={qrImage}
           alt="QR Code"
